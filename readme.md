@@ -2,7 +2,7 @@
 
 ### Where important conversations happen
 
-[https://theshortbus.herokuapp.com/](https://theshortbus.herokuapp.com/)
+[https://theshortb.us./](https://theshortb.us/)
 
 <p align="center">
     <img src="https://i.imgur.com/DLx9lj4.png">
