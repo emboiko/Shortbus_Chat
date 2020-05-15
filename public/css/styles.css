@@ -200,8 +200,11 @@ button:disabled {
 }
 
 
-@media only screen and (max-height: 400px) {
+@media only screen and (max-height: 500px) {
     .centered-form {
       background-image: none;
+    }
+    .centered-form__box {
+        height: 100%;
     }
   }
