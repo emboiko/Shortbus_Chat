@@ -28,9 +28,20 @@ const getUser = (id) => users.find((user) => user.id === id)
 
 const getUsersInRoom = (room) => users.filter((user) => user.room === room);
 
+const getNumUsers = () => users.length;
+
+const getNumRooms = () => {
+    user_rooms = [];
+    users.forEach((user) => user_rooms.push(user.room));
+    rooms = new Set(user_rooms);
+    return rooms.size;
+}
+
 module.exports = {
     addUser,
     removeUser,
     getUser,
-    getUsersInRoom
+    getUsersInRoom,
+    getNumUsers,
+    getNumRooms
 };

@@ -1,9 +1,17 @@
 const path = require("path");
 const http = require("http");
-const express = require("express");
 const socketio = require("socket.io");
+const express = require("express");
+const hbs = require('express-hbs');
 const createMessage = require("./utils/messages");
-const { addUser, removeUser, getUser, getUsersInRoom } = require("./utils/users");
+const {
+    addUser,
+    removeUser,
+    getUser,
+    getUsersInRoom,
+    getNumUsers,
+    getNumRooms
+} = require("./utils/users");
 
 const PORT = process.env.PORT || 3000;
 const publicDirectoryPath = path.join(__dirname, "../public");
@@ -13,6 +21,16 @@ const server = http.createServer(app);
 const io = socketio(server);
 
 app.use(express.static(publicDirectoryPath));
+app.set('view engine', 'hbs');
+app.set('views', path.join(__dirname, "..", "views"));
+app.engine('hbs', hbs.express4());
+
+app.get("/", (req, res) => {
+    res.render("index", {
+        numUsers:getNumUsers(),
+        numRooms:getNumRooms(),
+    });
+});
 
 io.on("connection", (socket) => {
 

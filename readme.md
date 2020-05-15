@@ -2,7 +2,7 @@
 
 ### Where important conversations happen
 
-[https://theshortb.us./](https://theshortb.us/)
+http://theshortb.us/
 
 <p align="center">
     <img src="https://i.imgur.com/DLx9lj4.png">

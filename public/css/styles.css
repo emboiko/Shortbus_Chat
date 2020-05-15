@@ -22,6 +22,11 @@ body {
 
 h1 {
     margin-bottom: 16px;
+    text-align: center;
+}
+
+h4 {
+    margin-bottom: 16px;
 }
 
 label {
@@ -58,20 +63,27 @@ button:disabled {
 
 /* Join*/
 
+#stats{
+    color:#FEBE2D;
+}
+
+
 .centered-form {
     background: #17202A;
+    background-image: url("/img/bus_front.png");    
+    background-position: bottom; /* Center the image */
+    background-size: 50vh; /* Resize the background image to cover the entire container */
+    background-repeat: no-repeat; /* Do not repeat the image */
     width: 100vw;
     height: 100vh;   
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .centered-form__box {
     box-shadow: 0px 0px 17px 1px #1D1F26;
     background: #4D5656;
     padding: 24px;
-    width: 300px;
+    width: 500px;
+    margin: 0 auto;
 }
 
 .centered-form button {
@@ -186,3 +198,10 @@ button:disabled {
     padding: 12px 24px 0 24px;
     text-transform: capitalize;
 }
+
+
+@media only screen and (max-height: 400px) {
+    .centered-form {
+      background-image: none;
+    }
+  }
