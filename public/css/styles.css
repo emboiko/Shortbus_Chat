@@ -67,7 +67,6 @@ button:disabled {
     color:#FEBE2D;
 }
 
-
 .centered-form {
     background: #17202A;
     background-image: url("/img/bus_front.png");    
@@ -199,12 +198,19 @@ button:disabled {
     text-transform: capitalize;
 }
 
-
 @media only screen and (max-height: 500px) {
     .centered-form {
-      background-image: none;
+        background-image: none;
     }
     .centered-form__box {
         height: 100%;
     }
-  }
+}
+@media only screen and (max-width: 500px) {
+    .centered-form__box {
+        width: 100%;
+    }
+    .compose{
+        width:100vw;
+    }
+}
